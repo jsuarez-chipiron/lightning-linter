@@ -8,12 +8,27 @@ A linter for lightning components.
 npm install lightning-linter
 ```
 
+Create a test.js file with the following content:
+
+```javascript
+// test.js
+require('lightning-linter');
+```
+
 ## Run
 
-Locate a directory with lightning components. From the installation directory launch the following command:
+Locate a directory with lightning components. And launch the following command:
 
 ```bash
-npm start <lightning-components-dir> <outputFile CSV>
+node test.js <lightning-components-dir> <outputFile CSV>
 ```
 
 Open the generated CSV with your favourite CSV viewer.
+
+## Customizing rules
+
+You can customize your own ESlint rules by editing the following file
+
+```bash
+<install_dir>/node_modules/lightning-linter/my_rules.json
+```

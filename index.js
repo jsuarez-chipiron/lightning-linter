@@ -1,6 +1,6 @@
 var JSONPath = require('JSONPath');
 var fs = require('fs');
-cli = require("./node_modules/eslint/lib/cli");
+cli = require("eslint/lib/cli");
 
 // var outFile = "out.csv";
 var outFile = process.argv[3];
@@ -30,7 +30,7 @@ var args = [ 'node',
   './node_modules/eslint/bin/eslint.js',
   inputDir,
   '-c',
-  'my_rules.json',
+  './node_modules/lightning-linter/my_rules.json',
   '-o',
   'output.json',
   '-f',
@@ -55,12 +55,7 @@ try{
 }catch(err){
 	console.log(err);
 }
-
-for (let i in process.argv){
-	console.log(process.argv[i]);
-}
-
-console.log('OK')
+console.log('OK');
 
 // var args = [ '/usr/local/bin/node',
 //   '/Users/jsuarez/Documents/3_Informatica/Javascript/node/MyLinter/node_modules/eslint/bin/eslint.js',
