@@ -1,51 +1,19 @@
-# once
+# lightning-linter
 
-Only call a function once.
+A linter for lightning components.
 
-## usage
+## Installation
 
-```javascript
-var once = require('once')
-
-function load (file, cb) {
-  cb = once(cb)
-  loader.load('file')
-  loader.once('load', cb)
-  loader.once('error', cb)
-}
+```bash
+npm install lightning-linter
 ```
 
-Or add to the Function.prototype in a responsible way:
+## Run
 
-```javascript
-// only has to be done once
-require('once').proto()
+Locate a directory with lightning components. From the installation directory launch the following command:
 
-function load (file, cb) {
-  cb = cb.once()
-  loader.load('file')
-  loader.once('load', cb)
-  loader.once('error', cb)
-}
+```bash
+npm start <lightning-components-dir> <outputFile CSV>
 ```
 
-Ironically, the prototype feature makes this module twice as
-complicated as necessary.
 
-To check whether you function has been called, use `fn.called`. Once the
-function is called for the first time the return value of the original
-function is saved in `fn.value` and subsequent calls will continue to
-return this value.
-
-```javascript
-var once = require('once')
-
-function load (cb) {
-  cb = once(cb)
-  var stream = createStream()
-  stream.once('data', cb)
-  stream.once('end', function () {
-    if (!cb.called) cb(new Error('not found'))
-  })
-}
-```
