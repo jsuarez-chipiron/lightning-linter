@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": false
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "eqeqeq":"error",
+        "no-eq-null":"error",
+        "no-console":"error",
+        "no-alert":"error",
+        "no-unused-vars":"warn",
+        "no-undef":"error",
+        "no-mixed-spaces-and-tabs":"warn",
+        "block-scoped-var":"warn",
+        "consistent-return":"warn",
+        "curly":"warn",
+        "guard-for-in":"warn",
+        "no-plusplus":["error",{ "allowForLoopAfterthoughts": true }],
+        "no-redeclare":"error",
+        "no-trailing-spaces":"warn",
+        "semi":"error",
+        "no-array-constructor":"error",
+        "no-new-object":"error"
+    }
+}
