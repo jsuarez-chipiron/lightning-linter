@@ -1,16 +1,24 @@
 {
   "name": "lightning-linter",
-  "version": "1.0.0",
-  "description": "A simple linter for lightning",
+  "version": "1.0.1",
+  "description": "A linter for Lightning Components",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js $1 $2"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsuarez-chipiron/lightning-linter.git"
+  },
   "author": "jsuarez.chipiron <chipisuarez@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsuarez-chipiron/lightning-linter/issues"
+  },
   "dependencies": {
     "JSONPath": "^0.11.2",
     "eslint": "^3.12.2"
-  }
+  },
+  "homepage": "https://github.com/jsuarez-chipiron/lightning-linter#readme"
 }
