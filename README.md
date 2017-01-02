@@ -16,4 +16,4 @@ Locate a directory with lightning components. From the installation directory la
 npm start <lightning-components-dir> <outputFile CSV>
 ```
 
-
+Open the generated CSV with your favourite CSV viewer.
