@@ -19,7 +19,7 @@
         "no-plusplus":["error",{ "allowForLoopAfterthoughts": true }],
         "no-redeclare":"error",
         "no-trailing-spaces":"warn",
-        "semi":"error",
+        "semi":"warn",
         "no-array-constructor":"error",
         "no-new-object":"error"
     }
