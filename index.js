@@ -13,7 +13,8 @@ var micallback = function(x){
 	// console.log(x.result.length);
 	for (let i=0; i<x.messages.length; i++){
 		// console.log(x.result[i]+' _________')
-		if (x.messages[i].ruleId !== 'no-undef' && x.messages[i].message !== "'$A' is not defined."){
+		if ((x.messages[i].ruleId !== 'no-undef' && x.messages[i].message !== "'$A' is not defined." || 
+			 x.messages[i].ruleId !== 'no-unused-vars' && (x.messages[i].message.includes("'helper'") || x.messages[i].message.includes("'event'") || x.messages[i].message.includes("'evt'")))){
 			let severity = (x.messages[i].severity===2)?'error':((x.messages[i].severity===1)?'warning':'no-supported');
 			console.log("message: "+x.messages[i].message);
 			console.log("ruleId: "+x.messages[i].ruleId);

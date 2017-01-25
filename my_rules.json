@@ -9,7 +9,7 @@
         "no-eq-null":"error",
         "no-console":"error",
         "no-alert":"error",
-        "no-unused-vars":"warn",
+        "no-unused-vars":"error",
         "no-undef":"error",
         "no-mixed-spaces-and-tabs":"warn",
         "block-scoped-var":"warn",
